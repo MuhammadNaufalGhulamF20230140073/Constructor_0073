@@ -4,10 +4,10 @@ using namespace std;
 
 class Mahasiswa
 {
-public:
+    public:
     int nim;
     string nama;
-public:
+
     Mahasiswa()
     {
         nim = 0;
@@ -19,36 +19,32 @@ public:
     };
     Mahasiswa(string);
     Mahasiswa(int iNim, string iNama);
-    
-    void cetak();
-
-    Mahasiswa::Mahasiswa(string iNama){
-        nama = iNama;
-    }
-
-    Mahasiswa::Mahasiswa(int iNim,string iNama)
-    {
-        nim = iNim;
-        nama = iNama;
-    };
-
-    void Mahasiswa::cetak(){
-        cout << "NIM = " << nim << endl;
-        cout << "NAMA = " << nama << endl;
+    void cetak(){
+    cout << "NIM = " << nim << endl;
+    cout << "Nama =" << nama << endl;
+    cout << endl;
     }
 };
 
-int main()
+Mahasiswa::Mahasiswa(string iNama){
+    nim = 0;
+    nama = iNama;
+}
+
+Mahasiswa::Mahasiswa(int iNim, string iNama)
 {
+    nim= iNim;
+    nama = iNama;
+};
+
+int main(){
     Mahasiswa mhs1;
-    Mahasiswa mhs2(20);
-    Mahasiswa mhs3("Rohman");
-    Mahasiswa mhs4(31, "Arul");
+    Mahasiswa mhs2(19);
+    Mahasiswa mhs3("Hulk");
+    Mahasiswa mhs4(21,"Yudi");
 
     mhs1.cetak();
     mhs2.cetak();
     mhs3.cetak();
     mhs4.cetak();
-
-    return 0;
 }
